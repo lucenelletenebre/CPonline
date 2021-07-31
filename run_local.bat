@@ -1,1 +1,1 @@
-python -m http.server -d html 8000
+python -m http.server -d docs 8000
