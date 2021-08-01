@@ -62,9 +62,11 @@ $(document).ready(function () {
         //get the second part of the class
         //new PropsSI -> get only PropsSI
         var class_name = $(this).attr('class').split(' ')[1];
+        //console.log(class_name);
 
         // copy the template with class = class_name
         var $copy = $(`div.${class_name}#T0,div.${class_name}#T1`).clone(true);
+        //console.log($copy);
 
         // set the new id
         $copy.attr('id', Date.now());
@@ -76,11 +78,11 @@ $(document).ready(function () {
     
     //------------------------------------------------------------
     // button for calculating PropsSI
-    $('.Calc_PropsSI').click(function () {
+    $('button.Calc.PropsSI').click(function () {
         console.log('Pressed Calc PropsSI');
 
         // get entire div from which the button was pressed
-        var $box = $(this).closest('.PropsSI');
+        var $box = $(this).closest('div.PropsSI');
 
         // extract the value
         var out = $box.find('#out').val();
@@ -102,11 +104,11 @@ $(document).ready(function () {
 
     //------------------------------------------------------------
     // button for calculating HAPropsSI
-    $('.Calc_HAPropsSI').click(function () {
+    $('button.Calc.HAPropsSI').click(function () {
         console.log('Pressed Calc HAPropsSI');
 
         // get entire div from which the button was pressed
-        var $box = $(this).closest('.HAPropsSI');
+        var $box = $(this).closest('div.HAPropsSI');
 
         // extract the value
         var out = $box.find('#HAout').val();

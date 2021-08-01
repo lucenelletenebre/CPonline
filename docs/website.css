@@ -4,16 +4,15 @@ body {
 
 .function{
     border-style: solid;
+    padding: 1em;
 }
 
 div.PropsSI {
     background-color: rgb(234, 250, 11);
-    padding: 1em;
 }
 
 div.HAPropsSI {
     background-color: rgb(45, 207, 107);
-    padding: 1em;
 }
 
 div#T0, div#T1 {
@@ -31,4 +30,8 @@ div#T0, div#T1 {
 
 .workplace {
     border-style: outset; 
+}
+
+.comand {
+    padding: 1em;
 }
