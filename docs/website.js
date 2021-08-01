@@ -18,6 +18,28 @@ $(document).ready(function () {
     // END DEBUG
     //------------------------
 
+    // START OF PROGRAM
+
+    //------------------------------------------------------------
+    // button for duplicating PropsSI
+    $('.duplicate').click(function () {
+        
+        // get entire div from which the button was pressed
+        var $box = $(this).closest('div.function');
+
+        // create a new div (clone must use true to copy also events)
+        var $copy = $box.clone(true);
+
+        // set the new id
+        $copy.attr('id', Date.now());
+
+        // Add new div after the current one
+        $box.after($copy);
+
+
+    });//end 
+
+    //------------------------------------------------------------
     // button for calculating PropsSI
     $('.Calc_PropsSI').click(function () {
         console.log('Pressed Calc PropsSI 5');

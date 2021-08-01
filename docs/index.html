@@ -29,12 +29,15 @@
 
     <h1>CoolProp Online</h1>
 
-    <div class='PropsSI' id='F1'>
+    <div class='PropsSI function' id=0>
         <h2>PropsSI</h2>
-        <div class='input'>
-            <label for="out">Output:</label>
-            <input type="text" id="out" name="Out"><br>
 
+        <div id='comand'>
+            <button class="duplicate">Duplicate</button>
+        </div>
+
+        <div class='input'>
+            
             <label for="arg1">Arg1:</label>
             <input type="text" id="arg1" name="Arg1">
 
@@ -49,13 +52,14 @@
 
             <label for="arg3">Arg3:</label>
             <input type="text" id="arg3" name="Arg3"><br>
+
+            <label for="out">Output:</label>
+            <input type="text" id="out" name="Out">
+            <div class='output'></div>
+
         </div>
 
         <button class="Calc_PropsSI">Calculate</button>
-
-        <div class='output'>
-            
-        </div>
 
     </div>
 
