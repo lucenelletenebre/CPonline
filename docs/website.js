@@ -14,6 +14,14 @@ $(document).ready(function () {
         $('#arg3').val('R134a');
         $('#val1').val('296.15');
         $('#val2').val('0.5');
+
+        $('#HAout').val('V');
+        $('#HAarg1').val('T');
+        $('#HAarg2').val('R');
+        $('#HAarg3').val('P');
+        $('#HAval1').val('296.15');
+        $('#HAval2').val('0.0');
+        $('#HAval3').val('101325');
     };
     // END DEBUG
     //------------------------
@@ -50,7 +58,7 @@ $(document).ready(function () {
     //------------------------------------------------------------
     // button for calculating PropsSI
     $('.Calc_PropsSI').click(function () {
-        console.log('Pressed Calc PropsSI 5');
+        console.log('Pressed Calc PropsSI');
 
         // get entire div from which the button was pressed
         var $box = $(this).closest('.PropsSI');
@@ -73,6 +81,32 @@ $(document).ready(function () {
         $box.find('.output').text(result);
     });
 
+    //------------------------------------------------------------
+    // button for calculating HAPropsSI
+    $('.Calc_HAPropsSI').click(function () {
+        console.log('Pressed Calc HAPropsSI');
+
+        // get entire div from which the button was pressed
+        var $box = $(this).closest('.HAPropsSI');
+
+        // extract the value
+        var out = $box.find('#HAout').val();
+        var arg1 = $box.find('#HAarg1').val();
+        var arg2 = $box.find('#HAarg2').val();
+        var arg3 = $box.find('#HAarg3').val();
+        var val1 = parseFloat($box.find('#HAval1').val());
+        var val2 = parseFloat($box.find('#HAval2').val());
+        var val3 = parseFloat($box.find('#HAval3').val());
+
+        // compute results
+        var result = Module.HAPropsSI(out, arg1, val1, arg2, val2, arg3, val3);
+        
+        // log comand template
+        console.log(`HAPropsSI(${out}, ${arg1}, ${val1}, ${arg2}, ${val2}, ${arg3}, ${val3}) = ${result}`);
+
+        // populate results
+        $box.find('.output').text(result);
+    });
 
 
 

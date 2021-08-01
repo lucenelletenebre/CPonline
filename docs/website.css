@@ -2,8 +2,16 @@ body {
     background-color: lightblue;
 }
 
-.PropsSI {
+.function{
     border-style: dashed;
+}
+
+.PropsSI {
+    background-color: rgb(234, 250, 11)
+}
+
+.HAPropsSI {
+    background-color: rgb(45, 207, 107)
 }
 
 /*
