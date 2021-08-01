@@ -22,6 +22,11 @@ div#T0, div#T1 {
     font-weight: bold;
 }
 
-div.NEWcomand {
+.NEWcomand {
     text-align: center;
+    padding: 1em;
+}
+
+.workplace {
+    border-style: outset; 
 }
