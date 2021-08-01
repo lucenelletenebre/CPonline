@@ -8,20 +8,20 @@ $(document).ready(function () {
     if (debug) {
         console.log('Debug is ON');
 
-        $('#out').val('P');
-        $('#arg1').val('T');
-        $('#arg2').val('Q');
-        $('#arg3').val('R134a');
-        $('#val1').val('296.15');
-        $('#val2').val('0.5');
+        $('.out').val('P');
+        $('.arg1').val('T');
+        $('.arg2').val('Q');
+        $('.arg3').val('R134a');
+        $('.val1').val('296.15');
+        $('.val2').val('0.5');
 
-        $('#HAout').val('V');
-        $('#HAarg1').val('T');
-        $('#HAarg2').val('R');
-        $('#HAarg3').val('P');
-        $('#HAval1').val('296.15');
-        $('#HAval2').val('0.0');
-        $('#HAval3').val('101325');
+        $('.HAout').val('V');
+        $('.HAarg1').val('T');
+        $('.HAarg2').val('R');
+        $('.HAarg3').val('P');
+        $('.HAval1').val('296.15');
+        $('.HAval2').val('0.0');
+        $('.HAval3').val('101325');
     };
     // END DEBUG
     //------------------------
@@ -85,12 +85,15 @@ $(document).ready(function () {
         var $box = $(this).closest('div.PropsSI');
 
         // extract the value
-        var out = $box.find('#out').val();
-        var arg1 = $box.find('#arg1').val();
-        var arg2 = $box.find('#arg2').val();
-        var arg3 = $box.find('#arg3').val();
-        var val1 = parseFloat($box.find('#val1').val());
-        var val2 = parseFloat($box.find('#val2').val());
+        var out = $box.find('.out').val();
+        var arg1 = $box.find('.arg1').val();
+        var arg2 = $box.find('.arg2').val();
+        var arg3 = $box.find('.arg3').val();
+        var val1 = parseFloat($box.find('.val1').val());
+        var val2 = parseFloat($box.find('.val2').val());
+
+        // log comand template
+        // console.log(`PropsSI(${out}, ${arg1}, ${val1}, ${arg2}, ${val2}, ${arg3})`)
 
         // compute results
         var result = Module.PropsSI(out, arg1, val1, arg2, val2, arg3);
@@ -111,13 +114,13 @@ $(document).ready(function () {
         var $box = $(this).closest('div.HAPropsSI');
 
         // extract the value
-        var out = $box.find('#HAout').val();
-        var arg1 = $box.find('#HAarg1').val();
-        var arg2 = $box.find('#HAarg2').val();
-        var arg3 = $box.find('#HAarg3').val();
-        var val1 = parseFloat($box.find('#HAval1').val());
-        var val2 = parseFloat($box.find('#HAval2').val());
-        var val3 = parseFloat($box.find('#HAval3').val());
+        var out = $box.find('.HAout').val();
+        var arg1 = $box.find('.HAarg1').val();
+        var arg2 = $box.find('.HAarg2').val();
+        var arg3 = $box.find('.HAarg3').val();
+        var val1 = parseFloat($box.find('.HAval1').val());
+        var val2 = parseFloat($box.find('.HAval2').val());
+        var val3 = parseFloat($box.find('.HAval3').val());
 
         // compute results
         var result = Module.HAPropsSI(out, arg1, val1, arg2, val2, arg3, val3);
