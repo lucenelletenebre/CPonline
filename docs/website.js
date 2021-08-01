@@ -3,7 +3,7 @@ $(document).ready(function () {
     //------------------------
     //START DEBUG
     // if debug is true add some value for fast debugging
-    var debug = true;
+    var debug = false;
 
     if (debug) {
         console.log('Debug is ON');
