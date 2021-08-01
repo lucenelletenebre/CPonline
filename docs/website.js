@@ -62,11 +62,9 @@ $(document).ready(function () {
         //get the second part of the class
         //new PropsSI -> get only PropsSI
         var class_name = $(this).attr('class').split(' ')[1];
-        console.log(class_name);
 
-        // copy the template
+        // copy the template with class = class_name
         var $copy = $(`div.${class_name}#T0,div.${class_name}#T1`).clone(true);
-        console.log($copy);
 
         // set the new id
         $copy.attr('id', Date.now());
@@ -74,7 +72,8 @@ $(document).ready(function () {
         // Add new div after the current one
         $('div.workplace').append($copy);
 
-    });//end $('.delete').click
+    });//end $('button.new').click
+    
     //------------------------------------------------------------
     // button for calculating PropsSI
     $('.Calc_PropsSI').click(function () {
