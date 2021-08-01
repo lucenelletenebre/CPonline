@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>CoolProp Online</title>
+
+    <!-- JQuery no AIAX uncompressed -->
+    <!--
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.js" integrity="sha512-HNbo1d4BaJjXh+/e6q4enTyezg5wiXvY3p/9Vzb20NIvkJghZxhzaXeffbdJuuZSxFhJP87ORPadwmU9aN3wSA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    -->
+
+    <!-- JQuery no AIAX compressed -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js"
+        integrity="sha512-6ORWJX/LrnSjBzwefdNUyLCMTIsGoNP6NftMy2UAm1JBm6PRZCO1d7OHBStWpVFZLO+RerTvqX/Z9mBFfCJZ4A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Coolprop Script -->
+    <script src="coolprop.js?v6.4.1"></script>
+
+    <!-- Website Script -->
+    <script src="website.js"></script>
+</head>
+
+<body>
+
+    <div class='PropsSI' id='F1'>
+        <h2>PropsSI</h2>
+        <div class='input'>
+            <label for="out">Output:</label>
+            <input type="text" id="out" name="Out"><br>
+
+            <label for="arg1">Arg1:</label>
+            <input type="text" id="arg1" name="Arg1">
+
+            <label for="val1">Val1:</label>
+            <input type="text" id="val1" name="Val1"><br>
+
+            <label for="arg2">Arg2:</label>
+            <input type="text" id="arg2" name="Arg2">
+
+            <label for="val2">Val2:</label>
+            <input type="text" id="val2" name="Val2"><br>
+
+            <label for="arg3">Arg3:</label>
+            <input type="text" id="arg3" name="Arg3"><br>
+        </div>
+
+        <button class="Calc_PropsSI">Calculate</button>
+
+        <div class='output'>
+            <h1>Hello world</h1>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
