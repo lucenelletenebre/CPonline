@@ -24,7 +24,6 @@ $(document).ready(function () {
 
         // get entire div from which the button was pressed
         var $box = $(this).closest('.PropsSI');
-        console.log($box);
 
         // extract the value
         var out = $box.find('#out').val();
@@ -34,12 +33,11 @@ $(document).ready(function () {
         var val1 = parseFloat($box.find('#val1').val());
         var val2 = parseFloat($box.find('#val2').val());
 
-        // log comand template
-        console.log(`PropsSI(${out}, ${arg1}, ${val1}, ${arg2}, ${val2}, ${arg3})`);
-
         // compute results
         var result = Module.PropsSI(out, arg1, val1, arg2, val2, arg3);
-        console.log(result);
+        
+        // log comand template
+        console.log(`PropsSI(${out}, ${arg1}, ${val1}, ${arg2}, ${val2}, ${arg3}) = ${result}`);
 
         // populate results
         $box.find('.output').text(result);
