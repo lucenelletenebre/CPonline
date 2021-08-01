@@ -3,15 +3,17 @@ body {
 }
 
 .function{
-    border-style: dashed;
+    border-style: solid;
 }
 
 div.PropsSI {
-    background-color: rgb(234, 250, 11)
+    background-color: rgb(234, 250, 11);
+    padding: 1em;
 }
 
 div.HAPropsSI {
-    background-color: rgb(45, 207, 107)
+    background-color: rgb(45, 207, 107);
+    padding: 1em;
 }
 
 div#T0, div#T1 {
