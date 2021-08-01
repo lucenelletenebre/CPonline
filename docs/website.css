@@ -14,7 +14,14 @@ div.HAPropsSI {
     background-color: rgb(45, 207, 107)
 }
 
-
 div#T0, div#T1 {
     display: none;
+}
+
+.output {
+    font-weight: bold;
+}
+
+div.NEWcomand {
+    text-align: center;
 }
