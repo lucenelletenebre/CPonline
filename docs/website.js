@@ -21,7 +21,7 @@ $(document).ready(function () {
     // START OF PROGRAM
 
     //------------------------------------------------------------
-    // button for duplicating PropsSI
+    // button for duplicating 
     $('.duplicate').click(function () {
         
         // get entire div from which the button was pressed
@@ -36,8 +36,16 @@ $(document).ready(function () {
         // Add new div after the current one
         $box.after($copy);
 
+    });//end $('.duplicate').click
 
-    });//end 
+    //------------------------------------------------------------
+    // button for deleting 
+    $('.delete').click(function () {
+        
+        // delete entire div
+        $(this).closest('div.function').remove();
+
+    });//end $('.delete').click
 
     //------------------------------------------------------------
     // button for calculating PropsSI
