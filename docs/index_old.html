@@ -77,6 +77,7 @@
         var s = Module.PropsSI('S', key1, val1, key2, val2, name)
         var h = Module.PropsSI('H', key1, val1, key2, val2, name)
         var cp = Module.PropsSI('C', key1, val1, key2, val2, name)
+        var ver = Module.HAPropsSI('V', 'P', 101325.0, 'R', 0.0, 'T', 273.0)
         
         text = ''
         text += 'T = ' + T + ' K\n' + '<br>'
@@ -85,6 +86,7 @@
         text += 's = ' + s + ' J/kg/K<br>'
         text += 'h = ' + h + ' J/kg<br>'
         text += 'cp = ' + cp + ' J/kg/K<br>'
+        text += 'version = ' + ver + ' <br>'
         
         $( "#output" ).html( text);
         
