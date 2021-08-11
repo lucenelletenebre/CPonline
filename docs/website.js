@@ -15,12 +15,13 @@ $(document).ready(function () {
         $('.val1').val('296.15');
         $('.val2').val('0.5');
 
-        $('.HAout').val('V');
+        $('.HAout').val('Twb');
+        $('.output').text('348.15');
         $('.HAarg1').val('T');
-        $('.HAarg2').val('R');
+        $('.HAarg2').val('W');
         $('.HAarg3').val('P');
-        $('.HAval1').val('296.15');
-        $('.HAval2').val('0.0');
+        $('.HAval1').val('273.15+200.0');
+        $('.HAval2').val('0.30');
         $('.HAval3').val('101325');
     };
     // END DEBUG
@@ -89,8 +90,8 @@ $(document).ready(function () {
         var arg1 = $box.find('.arg1').val();
         var arg2 = $box.find('.arg2').val();
         var arg3 = $box.find('.arg3').val();
-        var val1 = Number($box.find('.val1').val().replace(',', '.'));
-        var val2 = Number($box.find('.val2').val().replace(',', '.'));
+        var val1 = math.evaluate($box.find('.val1').val().replace(',', '.'));
+        var val2 = math.evaluate($box.find('.val2').val().replace(',', '.'));
 
         // log comand template
         // console.log(`PropsSI(${out}, ${arg1}, ${val1}, ${arg2}, ${val2}, ${arg3})`)
@@ -118,9 +119,9 @@ $(document).ready(function () {
         var arg1 = $box.find('.HAarg1').val();
         var arg2 = $box.find('.HAarg2').val();
         var arg3 = $box.find('.HAarg3').val();
-        var val1 = Number($box.find('.HAval1').val().replace(',', '.'));
-        var val2 = Number($box.find('.HAval2').val().replace(',', '.'));
-        var val3 = Number($box.find('.HAval3').val().replace(',', '.'));
+        var val1 = math.evaluate($box.find('.HAval1').val().replace(',', '.'));
+        var val2 = math.evaluate($box.find('.HAval2').val().replace(',', '.'));
+        var val3 = math.evaluate($box.find('.HAval3').val().replace(',', '.'));
 
         // compute results
         var result = Module.HAPropsSI(out, arg1, val1, arg2, val2, arg3, val3);
