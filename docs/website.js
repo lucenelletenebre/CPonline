@@ -89,8 +89,8 @@ $(document).ready(function () {
         var arg1 = $box.find('.arg1').val();
         var arg2 = $box.find('.arg2').val();
         var arg3 = $box.find('.arg3').val();
-        var val1 = parseFloat($box.find('.val1').val());
-        var val2 = parseFloat($box.find('.val2').val());
+        var val1 = Number($box.find('.val1').val().replace(',', '.'));
+        var val2 = Number($box.find('.val2').val().replace(',', '.'));
 
         // log comand template
         // console.log(`PropsSI(${out}, ${arg1}, ${val1}, ${arg2}, ${val2}, ${arg3})`)
@@ -118,9 +118,9 @@ $(document).ready(function () {
         var arg1 = $box.find('.HAarg1').val();
         var arg2 = $box.find('.HAarg2').val();
         var arg3 = $box.find('.HAarg3').val();
-        var val1 = parseFloat($box.find('.HAval1').val());
-        var val2 = parseFloat($box.find('.HAval2').val());
-        var val3 = parseFloat($box.find('.HAval3').val());
+        var val1 = Number($box.find('.HAval1').val().replace(',', '.'));
+        var val2 = Number($box.find('.HAval2').val().replace(',', '.'));
+        var val3 = Number($box.find('.HAval3').val().replace(',', '.'));
 
         // compute results
         var result = Module.HAPropsSI(out, arg1, val1, arg2, val2, arg3, val3);
