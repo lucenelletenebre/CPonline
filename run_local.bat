@@ -1,1 +1,1 @@
-python -m http.server -d docs 8000
+python -m http.server -d docs -b 127.0.0.1 8000
