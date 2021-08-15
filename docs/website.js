@@ -8,21 +8,22 @@ $(document).ready(function () {
     if (debug) {
         console.log('Debug is ON');
 
-        $('.out').val('P');
-        $('.arg1').val('T');
+        $('.out').val('T');
+        $('.output.PSIout').text('373.1242958476844');
+        $('.arg1').val('P');
         $('.arg2').val('Q');
-        $('.arg3').val('R134a');
-        $('.val1').val('296.15');
-        $('.val2').val('0.5');
+        $('.arg3').val('Water');
+        $('.val1').val('101325');
+        $('.val2').val('0.0');
 
-        $('.HAout').val('Twb');
-        $('.output').text('348.15');
+        $('.HAout').val('W');
+        $('.output.HAPSIout').text('0.011095529705199761');
         $('.HAarg1').val('T');
-        $('.HAarg2').val('W');
+        $('.HAarg2').val('R');
         $('.HAarg3').val('P');
-        $('.HAval1').val('273.15+200.0');
-        $('.HAval2').val('0.30');
-        $('.HAval3').val('101325');
+        $('.HAval1').val('300.0');
+        $('.HAval2').val('0.50');
+        $('.HAval3').val('101325,0');
     };
     // END DEBUG
     //------------------------
